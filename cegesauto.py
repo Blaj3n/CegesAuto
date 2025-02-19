@@ -75,3 +75,22 @@ for kocsi in sorted(osszes_auto):
             kilometerek.append(auto[4])
     megtett_km = kilometerek[-1] - kilometerek[0]
     print(f"{kocsi} {megtett_km} km ")
+
+print("6. feladat")
+szemelyek = []
+for auto in autok:
+    if auto[3] not in szemelyek:
+        szemelyek.append(auto[3])
+print(sorted(szemelyek))
+
+megtett_kilometer = []
+for szemely in sorted(szemelyek):
+    szemelyenkent_kilometer = []
+    for auto in autok:
+        if szemely == auto[3]:
+            szemelyenkent_kilometer.append(auto[4])
+    megtett_kilometer.append(szemelyenkent_kilometer)
+print(megtett_kilometer)
+# HÁZI: Ugye a leghosszabb utat akarjuk megnézni, tehát a páratlan indexü elemből kivonjuk az az előttit.
+# 500 -> 25945 - 25385 = 560
+# [[560], []] -> range(kezdő, vég-1, 2)
