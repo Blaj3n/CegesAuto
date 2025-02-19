@@ -37,3 +37,14 @@ for egyelem in autok:
         kihajtas.append(egyelem)
 print(kihajtas)
 print(f"{kihajtas[-1][0]}. nap rendszám: {kihajtas[len(kihajtas)-1][2]}")
+
+print("3. feladat ")
+nap = 4 #int(input("Nap: "))
+print(f"Forgalom a(z) {nap}. napon: ")
+for auto in autok:
+    if auto[0] == nap:
+        print(f"{auto[1]} {auto[2]} {auto[3]}", end=" ")
+        if auto[5] == 0:
+            print("ki")
+        else:
+            print("be")
