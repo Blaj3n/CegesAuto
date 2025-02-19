@@ -22,3 +22,18 @@ for egyelem in autok:
         utolso_kihajtas = []
         utolso_kihajtas = [egyelem[0], egyelem[2]]
 print(f"{utolso_kihajtas[0]}. nap rendszám: {utolso_kihajtas[1]}")
+
+"""
+végig megyünk a 'autok' listánkon, és ha találunk egy kihajtó kocsit,
+akkor belehelyezzük a listánkba a kért adatokat [nap, rendszám].
+Miután minden egyes ciklusban a listánk frissül, ezért a legutolsó kihajtáskor
+a kért adataink lesznek benne, amit kiprintelhetünk.
+"""
+
+print("2.3. feladat ")
+kihajtas = []
+for egyelem in autok:
+    if egyelem[-1] == 0:
+        kihajtas.append(egyelem)
+print(kihajtas)
+print(f"{kihajtas[-1][0]}. nap rendszám: {kihajtas[len(kihajtas)-1][2]}")
