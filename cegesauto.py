@@ -66,3 +66,12 @@ for kocsi in osszes_auto:
     if len(kocsik) % 2 == 1:
         auto_kint += 1
 print(f"A hónap végén {auto_kint} autót nem hoztak vissza.")
+
+print("5. feladat")
+for kocsi in sorted(osszes_auto):
+    kilometerek = []
+    for auto in autok:
+        if auto[2] == kocsi:
+            kilometerek.append(auto[4])
+    megtett_km = kilometerek[-1] - kilometerek[0]
+    print(f"{kocsi} {megtett_km} km ")
