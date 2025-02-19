@@ -10,3 +10,8 @@ with open("autok.txt", "r", encoding="utf-8") as file:
 
 print(autok)
 
+print("2.1. feladat ")
+i = len(autok) - 1  # összelemszám [293]
+while autok[i][5] == 1:
+    i -= 1
+print(f"{autok[i][0]}. nap rendszám: {autok[i][2]}")
