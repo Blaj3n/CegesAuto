@@ -9,3 +9,4 @@ with open("autok.txt", "r", encoding="utf-8") as file:
         # autok_dict.append({"nap": int(egyauto[0]), "idő": str(egyauto[1])})
 
 print(autok)
+
