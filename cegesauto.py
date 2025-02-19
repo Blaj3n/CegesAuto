@@ -48,3 +48,21 @@ for auto in autok:
             print("ki")
         else:
             print("be")
+
+print("4. feladat ")
+auto_kint = 0
+osszes_auto = []
+for auto in autok:
+    if auto[2] not in osszes_auto:
+        osszes_auto.append(auto[2])
+
+print(osszes_auto)
+for kocsi in osszes_auto:
+    kocsik = []
+    for auto in autok:
+        if auto[2] == kocsi:
+            kocsik.append(auto[5])
+    print(kocsik)
+    if len(kocsik) % 2 == 1:
+        auto_kint += 1
+print(f"A hónap végén {auto_kint} autót nem hoztak vissza.")
